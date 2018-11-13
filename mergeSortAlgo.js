@@ -41,3 +41,5 @@ function mergeSort (arr) {
   var t1 = performance.now();
   console.log(mergeSort(list));
   console.log("Call to mergeSort(list) took " + (t1 - t0) + " milliseconds.")
+
+  module.exports = mergeSort;

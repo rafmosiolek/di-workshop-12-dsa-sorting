@@ -23,3 +23,5 @@ bubbleSort(ary);
 var t1 = performance.now();
 console.log(ary);
 console.log("Call to bubbleSort(ary) took " + (t1 - t0) + " milliseconds.")
+
+module.exports = bubbleSort;

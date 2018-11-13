@@ -21,3 +21,5 @@ function insertionSort (items) {
   console.log(insertionSort(list));
   var t1 = performance.now();
   console.log("Call to insertionSort(list) took " + (t1 - t0) + " milliseconds.");
+
+  module.exports = insertionSort;
