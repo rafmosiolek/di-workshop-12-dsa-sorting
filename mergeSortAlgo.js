@@ -1,3 +1,5 @@
+const { performance } = require('perf_hooks')
+
 // Split the array into halves and merge them recursively 
 function mergeSort (arr) {
     if (arr.length === 1) {
@@ -33,6 +35,9 @@ function mergeSort (arr) {
   
     return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
   }
-  
+
+  var t0 = performance.now();
   const list = Array.from({length: 100}, () => Math.floor(Math.random() * 900));
+  var t1 = performance.now();
   console.log(mergeSort(list));
+  console.log("Call to mergeSort(list) took " + (t1 - t0) + " milliseconds.")
